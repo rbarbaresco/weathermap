@@ -14,7 +14,7 @@ def openweathertransform(forecast):
             day = {'date': splitted_date[0], 'moments': []}
             days[splitted_date[0]] = day
             response.append(day)
-
+        print('#############################################', current)
         day['moments'].append({
             'time': splitted_date[1],
             'temp': current['main']['temp'],
@@ -23,6 +23,7 @@ def openweathertransform(forecast):
             'humidity': current['main']['humidity'],
             'description': current['weather'][0]['description'],
             'icon': 'http://openweathermap.org/img/w/{}.png'.format(current['weather'][0]['icon']),
-            'wind_speed': current['wind']['speed']
+            'wind_speed': current['wind']['speed'],
+            'rain': current['rain']['3h']
         })
     return json.dumps(response)

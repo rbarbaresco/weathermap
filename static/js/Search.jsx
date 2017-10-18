@@ -67,17 +67,12 @@ export default class Search extends React.Component {
   render() {
     const { value, suggestions, isLoading } = this.state;
     const inputProps = {
-      placeholder: "Type a city...",
+      placeholder: "Search city...",
       value,
       onChange: this.onChange
     };
-    const status = (isLoading ? 'Loading...' : 'Type a city...');
-    
     return (
       <div>
-        <div className="status">
-          <strong>Forecast:</strong> {status}
-        </div>
         <Autosuggest 
           suggestions={suggestions}
           onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}

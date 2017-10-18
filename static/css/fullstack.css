@@ -1,15 +1,31 @@
 .page-header {
     min-height: 100%;
+    height: 100%;
     text-align: center;
-    background-image: url('../images/header.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     margin-top: -15px;
+    background: -moz-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(147,206,222,1)), color-stop(41%, rgba(117,189,209,1)), color-stop(100%, rgba(73,165,191,1)));
+    background: -webkit-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+    background: -o-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+    background: -ms-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+    background: linear-gradient(to right, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf', GradientType=1 );
 }
 .header-contents {
-    top: 50%;
-    position:absolute;
+    position: absolute;
+    top:18%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.react-autosuggest__suggestions-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 .header-contents h1 {
     font-size: 120px;
@@ -27,6 +43,12 @@
     outline: None;
 }
 
+.content-title {
+  color: #e8ebef;
+  font-size: 80px;
+  margin-bottom: 50px;
+}
+
 /* Autosuggest */
 body {
   font-family: Helvetica, sans-serif;
@@ -41,14 +63,18 @@ body {
 }
 
 .react-autosuggest__input {
-  width: 240px;
-  height: 30px;
+  width: 600px;
+  height: 65px;
+  background-color: transparent;
   padding: 10px 20px;
   font-family: Helvetica, sans-serif;
+  color: #e8ebef;
   font-weight: 300;
-  font-size: 16px;
-  border: 1px solid #aaa;
+  font-size: 36px;
+  text-align: center;
+  border: 2px solid #e8ebef;
   border-radius: 4px;
+  margin-bottom: 50px;
 }
 
 .react-autosuggest__input--focused {
@@ -70,7 +96,7 @@ body {
   top: 51px;
   width: 280px;
   border: 1px solid #aaa;
-  background-color: #fff;
+  background-color: #e8ebef;
   font-family: Helvetica, sans-serif;
   font-weight: 300;
   font-size: 16px;
@@ -92,4 +118,21 @@ body {
 
 .react-autosuggest__suggestion--highlighted {
   background-color: #ddd;
+}
+
+/* Forecast */
+.forecast-item {
+  margin-bottom: 25px;
+  width: 60%;
+  margin: 0 auto;
+}
+.forecast-item-date {
+  text-transform: lowercase;
+  color: #e8ebef;
+  
+}
+.forecast-item-temp {
+  text-transform: lowercase;
+  color: #e8ebef;
+  font-size: 18px;
 }

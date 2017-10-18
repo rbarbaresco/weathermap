@@ -46,12 +46,12 @@ export default class App extends React.Component {
 
         return (
             <PageHeader>
-                {this.addHeaderImg()}
                 <div className='header-contents'>
+                    <div className='content-title'>weathermap</div>
                     <Search propCallback={this.selectedCity} />
                     {forecast}
                 </div>
             </PageHeader>
         );
-}
+    }
 }
