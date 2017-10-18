@@ -14,27 +14,15 @@ export default class Forecast extends React.Component {
         var forecast = this.state.forecast;
         var labels = [];
         var temp_data = [];
-        var prec_data = [];
         for (var i = 0; i < forecast.moments.length; i++) {
             labels.push(forecast.moments[i].time)
             temp_data.push(forecast.moments[i].temp - 273)
-            prec_data.push(forecast.moments[i].rain)
         }
         var chartData = {
             labels: labels,
             datasets: [{
                 data: temp_data,
                 label: "temperature (ºC)",
-                fillColor: "rgba(220,220,220,0.2)",
-                strokeColor: "rgba(220,220,220,1)",
-                pointColor: "rgba(220,220,220,1)",
-                pointStrokeColor: "#fff",
-                pointHighlightFill: "#fff",
-                pointHighlightStroke: "rgba(220,220,220,1)",
-            },
-            {
-                data: prec_data,
-                label: "precipitation",
                 fillColor: "rgba(220,220,220,0.2)",
                 strokeColor: "rgba(220,220,220,1)",
                 pointColor: "rgba(220,220,220,1)",
