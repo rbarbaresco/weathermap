@@ -52,5 +52,6 @@ $ docker-compose up
 ## Future improvements:
 * As the server access a free api with requests limits, it's a good idea to use an in-memory data structure store such as Redis to cache the data, as the forecast don't change very often.
 * I used the same icons of the API, which don't match pretty well the application layout. It's a good idea to use some more matching icons.
-* Still about the icons, change from <img/> to style images, as will make the application a lot more performatic.
+* Still about the icons, change from img html tag to style images, as will make the application a lot more performatic.
 * Add more details about the current and incoming weather, adding information like sea level, precipitation, wind and others provided by the api.
+* More precise forecast with the icons, because the icons shows the weather of the 12:00:00 of the day only. When a day is selected, it shows the 00:00:00 forecast icon.
