@@ -55,7 +55,7 @@ export default class Search extends React.Component {
   };
 
   getSuggestionValue(suggestion) {
-      return '';
+      return suggestion.name + '/' + suggestion.country;
   }
 
   renderSuggestion(suggestion) {

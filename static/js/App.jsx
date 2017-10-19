@@ -2,7 +2,6 @@ import React from "react";
 import Search from "./Search";
 import Forecast from "./Forecast";
 require('../css/fullstack.css');
-import HeaderBackgroundImage from '../images/header.jpg';
 
 var $ = require('jquery');
 

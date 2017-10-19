@@ -14,11 +14,6 @@ class API:
         self.CACHE_EXPIRATION = 600  # 600 seconds
 
     def forecast(self, city_id):
-        # import json
-        # with open(os.getcwd() + '/florianopolis.json', 'r') as file:
-        #     self.forecast = file.read()
-        # return self.transform_method(json.loads(self.forecast))
-
         if not city_id:
             return ''
 
