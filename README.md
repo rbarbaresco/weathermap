@@ -11,6 +11,7 @@ Application that shows the forecast of the week, using the free http://openweath
 * NPM
 * webpack
 * CSS
+* Docker
 
 ## Building the application:
 
@@ -48,3 +49,8 @@ $ docker-compose up
 3) access via browser http://localhost:5000 and you are good to go :)
 
 
+## Future improvements:
+* As the server access a free api with requests limits, it's a good idea to use an in-memory data structure store such as Redis to cache the data, as the forecast don't change very often.
+* I used the same icons of the API, which don't match pretty well the application layout. It's a good idea to use some more matching icons.
+* Still about the icons, change from <img/> to style images, as will make the application a lot more performatic.
+* Add more details about the current and incoming weather, adding information like sea level, precipitation, wind and others provided by the api.
