@@ -8,7 +8,7 @@
     margin-top: -15px;
 }
 .header-contents {
-    margin: 10% auto 0 auto;
+    margin: 20px auto 0 auto;
     max-width: 80%;
     text-align: center;
 }
@@ -17,32 +17,24 @@
     left: 0;
     right: 0;
     margin: auto;
+    width: 600px !important;
+    top: 63px !important;
+    border: 0 !important;
 }
 .header-contents h1 {
     font-size: 120px;
     font-weight: 300;
 }
-.header-contents button {
-    font-size: 35px;
-    border-radius: 30px;
-    font-weight: 300;
-    top:50%;
-    left:50%;
-}
-
-.header-contents button:focus {
-    outline: None;
-}
 
 .content-title {
   color: #e8ebef;
   font-size: 80px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 /* Autosuggest */
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background: -moz-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(147,206,222,1)), color-stop(41%, rgba(117,189,209,1)), color-stop(100%, rgba(73,165,191,1)));
   background: -webkit-linear-gradient(left, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
@@ -51,6 +43,14 @@ body {
   background: linear-gradient(to right, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf', GradientType=1 );
 }
+
+input {
+  font-family: 'Montserrat', sans-serif;
+}
+
+::-webkit-input-placeholder {color: rgba(255, 255, 255, .5);}
+::-moz-placeholder {color: rgba(255, 255, 255, .5);}
+:-ms-input-placeholder {color: rgba(255, 255, 255, .5);}
 
 .status {
   line-height: 52px;
@@ -65,14 +65,12 @@ body {
   height: 65px;
   background-color: transparent;
   padding: 10px 20px;
-  font-family: Helvetica, sans-serif;
   color: #e8ebef;
-  font-weight: 300;
-  font-size: 36px;
+  font-size: 20px;
   text-align: center;
   border: 2px solid #e8ebef;
   border-radius: 4px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .react-autosuggest__input--focused {
@@ -123,13 +121,67 @@ body {
   width: 60%;
   margin: 0 auto 50px auto;
 }
-.forecast-item-date {
-  text-transform: lowercase;
-  color: #e8ebef;
-  
-}
 .forecast-item-temp {
   text-transform: lowercase;
   color: #e8ebef;
   font-size: 18px;
+}
+.city-name {
+  color: #e8ebef;
+  font-size: 18px;
+}
+.temperature-display {
+  color: #e8ebef;
+  font-size: 48px;
+}
+.forecast-temp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.forecast-temp img {
+  margin-left: 10px;
+}
+.min-max-temp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.min-max-temp label {
+  color: white;
+  margin: 0 15px 15px;
+}
+
+/* Day selector */
+.select-date {
+  background-color: transparent;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #e8ebef;
+  padding: 0 10px;
+  border: 2px solid rgba(255, 255, 255, .5);
+  border-radius: 5px;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  outline: none;
+}
+.select-date:hover, .select-date.active {
+  border: 2px solid rgba(255, 255, 255, 1);
+  color: white;
+}
+.select-date img {
+  width: 40px;
+  margin-left: 10px;
+}
+.btn-toolbar {
+  margin: 25px auto 0 auto;
+}
+.btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
